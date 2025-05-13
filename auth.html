@@ -45,6 +45,16 @@
                     </div>
                 </div>
             </form>
+            <!-- Add this form after the login form -->
+<form id="reset-form" class="reset-form">
+    <h3>Reset Password</h3>
+    <div class="form-group">
+        <label for="reset-email">Email</label>
+        <input type="email" id="reset-email" required>
+    </div>
+    <button type="submit" class="btn btn-auth">Send Reset Link</button>
+    <p class="back-to-login">Remember your password? <a href="#" id="show-login">Login here</a></p>
+</form>
 
             <!-- Registration Form -->
             <form id="register-form">
@@ -88,5 +98,8 @@
     </div>
 
     <script src="js/auth.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
 </body>
 </html>

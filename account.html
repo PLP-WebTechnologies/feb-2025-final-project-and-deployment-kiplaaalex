@@ -11,87 +11,108 @@
 <body>
     <!-- Header (Same as other pages) -->
     <header class="header">
-        <!-- Include the same header as other pages -->
+        <!-- Your existing header content -->
     </header>
 
-    <!-- Account Dashboard -->
     <section class="account-dashboard">
         <div class="container">
             <div class="account-sidebar">
-                <div class="account-profile">
-                    <div class="profile-image">
-                        <img src="images/avatar-placeholder.png" alt="Profile" id="profile-avatar">
-                        <button class="edit-avatar"><i class="fas fa-camera"></i></button>
+                <div class="account-welcome">
+                    <div class="avatar">
+                        <i class="fas fa-user-circle"></i>
                     </div>
-                    <h3 id="profile-name">Loading...</h3>
-                    <p id="profile-email">Loading...</p>
+                    <h3 id="username">Welcome, User</h3>
                 </div>
                 <nav class="account-menu">
                     <ul>
-                        <li><a href="#" class="active" data-section="dashboard"><i class="fas fa-home"></i> Dashboard</a></li>
-                        <li><a href="#" data-section="orders"><i class="fas fa-box"></i> My Orders</a></li>
+                        <li class="active"><a href="#" data-section="dashboard"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                        <li><a href="#" data-section="orders"><i class="fas fa-box-open"></i> My Orders</a></li>
                         <li><a href="#" data-section="addresses"><i class="fas fa-map-marker-alt"></i> Addresses</a></li>
                         <li><a href="#" data-section="payment"><i class="fas fa-credit-card"></i> Payment Methods</a></li>
-                        <li><a href="#" data-section="wishlist"><i class="fas fa-heart"></i> Wishlist</a></li>
-                        <li><a href="#" data-section="settings"><i class="fas fa-cog"></i> Account Settings</a></li>
+                        <li><a href="#" data-section="settings"><i class="fas fa-user-cog"></i> Account Settings</a></li>
                         <li><a href="#" id="logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
                     </ul>
                 </nav>
             </div>
+
             <div class="account-content">
                 <!-- Dashboard Section -->
                 <div class="account-section active" id="dashboard-section">
                     <h2>Account Overview</h2>
-                    <div class="dashboard-cards">
-                        <div class="dashboard-card">
-                            <div class="card-icon"><i class="fas fa-box"></i></div>
+                    <div class="account-summary">
+                        <div class="summary-card">
+                            <i class="fas fa-box-open"></i>
                             <h4>Recent Orders</h4>
-                            <p id="recent-orders-count">0</p>
+                            <p>5 orders placed</p>
                             <a href="#" data-section="orders">View All</a>
                         </div>
-                        <div class="dashboard-card">
-                            <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div class="summary-card">
+                            <i class="fas fa-map-marker-alt"></i>
                             <h4>Saved Addresses</h4>
-                            <p id="saved-addresses-count">0</p>
+                            <p>2 addresses saved</p>
                             <a href="#" data-section="addresses">Manage</a>
                         </div>
-                        <div class="dashboard-card">
-                            <div class="card-icon"><i class="fas fa-heart"></i></div>
-                            <h4>Wishlist Items</h4>
-                            <p id="wishlist-count">0</p>
-                            <a href="#" data-section="wishlist">View All</a>
+                        <div class="summary-card">
+                            <i class="fas fa-credit-card"></i>
+                            <h4>Payment Methods</h4>
+                            <p>1 card saved</p>
+                            <a href="#" data-section="payment">Manage</a>
                         </div>
                     </div>
-                    <div class="recent-activity">
-                        <h3>Recent Activity</h3>
-                        <ul id="activity-list">
-                            <!-- Activity items will be added here -->
-                        </ul>
+                    <div class="recent-orders">
+                        <h3>Recent Orders</h3>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Order #</th>
+                                    <th>Date</th>
+                                    <th>Items</th>
+                                    <th>Total</th>
+                                    <th>Status</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Orders will be loaded via JavaScript -->
+                            </tbody>
+                        </table>
                     </div>
                 </div>
 
                 <!-- Orders Section -->
                 <div class="account-section" id="orders-section">
                     <h2>My Orders</h2>
-                    <div class="orders-list" id="orders-list">
-                        <!-- Orders will be loaded here -->
-                        <div class="no-orders">
-                            <i class="fas fa-box-open"></i>
-                            <p>You haven't placed any orders yet</p>
-                            <a href="products.html" class="btn">Start Shopping</a>
-                        </div>
+                    <div class="order-filters">
+                        <button class="btn-filter active">All Orders</button>
+                        <button class="btn-filter">Processing</button>
+                        <button class="btn-filter">Shipped</button>
+                        <button class="btn-filter">Delivered</button>
+                    </div>
+                    <div class="orders-list">
+                        <!-- Orders will be loaded via JavaScript -->
                     </div>
                 </div>
 
                 <!-- Addresses Section -->
                 <div class="account-section" id="addresses-section">
                     <h2>Saved Addresses</h2>
-                    <button class="btn" id="add-address-btn">Add New Address</button>
-                    <div class="addresses-grid" id="addresses-grid">
-                        <!-- Address cards will be added here -->
-                        <div class="no-addresses">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <p>You haven't saved any addresses yet</p>
+                    <div class="addresses-grid">
+                        <div class="address-card">
+                            <h4>Default Shipping Address</h4>
+                            <address>
+                                John Doe<br>
+                                123 Nairobi Street<br>
+                                Nairobi, Kenya<br>
+                                Phone: 254712345678
+                            </address>
+                            <div class="address-actions">
+                                <button class="btn btn-small">Edit</button>
+                                <button class="btn btn-small btn-outline">Remove</button>
+                            </div>
+                        </div>
+                        <div class="address-card add-address">
+                            <i class="fas fa-plus"></i>
+                            <h4>Add New Address</h4>
                         </div>
                     </div>
                 </div>
@@ -99,25 +120,21 @@
                 <!-- Payment Methods Section -->
                 <div class="account-section" id="payment-section">
                     <h2>Payment Methods</h2>
-                    <button class="btn" id="add-payment-btn">Add Payment Method</button>
-                    <div class="payment-methods" id="payment-methods">
-                        <!-- Payment methods will be added here -->
-                        <div class="no-payments">
-                            <i class="fas fa-credit-card"></i>
-                            <p>You haven't added any payment methods yet</p>
+                    <div class="payment-methods">
+                        <div class="payment-card">
+                            <div class="card-details">
+                                <i class="fab fa-cc-visa"></i>
+                                <span>**** **** **** 4242</span>
+                                <small>Expires 05/25</small>
+                            </div>
+                            <div class="card-actions">
+                                <button class="btn btn-small">Edit</button>
+                                <button class="btn btn-small btn-outline">Remove</button>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-                <!-- Wishlist Section -->
-                <div class="account-section" id="wishlist-section">
-                    <h2>My Wishlist</h2>
-                    <div class="wishlist-grid" id="wishlist-grid">
-                        <!-- Wishlist items will be added here -->
-                        <div class="no-wishlist">
-                            <i class="fas fa-heart"></i>
-                            <p>Your wishlist is empty</p>
-                            <a href="products.html" class="btn">Browse Products</a>
+                        <div class="add-payment">
+                            <i class="fas fa-plus"></i>
+                            <h4>Add Payment Method</h4>
                         </div>
                     </div>
                 </div>
@@ -125,145 +142,39 @@
                 <!-- Account Settings Section -->
                 <div class="account-section" id="settings-section">
                     <h2>Account Settings</h2>
-                    <form id="profile-form">
+                    <form class="account-form" id="account-form">
                         <div class="form-group">
-                            <label for="settings-name">Full Name</label>
-                            <input type="text" id="settings-name" required>
+                            <label for="account-name">Full Name</label>
+                            <input type="text" id="account-name" required>
                         </div>
                         <div class="form-group">
-                            <label for="settings-email">Email Address</label>
-                            <input type="email" id="settings-email" required>
+                            <label for="account-email">Email</label>
+                            <input type="email" id="account-email" required>
                         </div>
                         <div class="form-group">
-                            <label for="settings-phone">Phone Number</label>
-                            <input type="tel" id="settings-phone" required>
+                            <label for="account-phone">Phone Number</label>
+                            <input type="tel" id="account-phone" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="account-password">Change Password</label>
+                            <div class="password-input">
+                                <input type="password" id="account-password" placeholder="Enter new password">
+                                <i class="fas fa-eye toggle-password"></i>
+                            </div>
                         </div>
                         <button type="submit" class="btn">Save Changes</button>
                     </form>
-                    <div class="account-actions">
-                        <h3>Password</h3>
-                        <button class="btn btn-outline" id="change-password-btn">Change Password</button>
-                        <h3>Account Actions</h3>
-                        <button class="btn btn-outline" id="delete-account-btn">Delete Account</button>
-                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Address Modal -->
-    <div class="modal" id="address-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3 id="address-modal-title">Add New Address</h3>
-            <form id="address-form">
-                <input type="hidden" id="address-id">
-                <div class="form-group">
-                    <label for="address-name">Address Name</label>
-                    <input type="text" id="address-name" placeholder="e.g. Home, Work" required>
-                </div>
-                <div class="form-row">
-                    <div class="form-group">
-                        <label for="address-first-name">First Name</label>
-                        <input type="text" id="address-first-name" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="address-last-name">Last Name</label>
-                        <input type="text" id="address-last-name" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="address-street">Street Address</label>
-                    <input type="text" id="address-street" required>
-                </div>
-                <div class="form-group">
-                    <label for="address-city">City/Town</label>
-                    <input type="text" id="address-city" required>
-                </div>
-                <div class="form-group">
-                    <label for="address-county">County</label>
-                    <select id="address-county" required>
-                        <option value="">Select County</option>
-                        <option value="nairobi">Nairobi</option>
-                        <option value="mombasa">Mombasa</option>
-                        <option value="kisumu">Kisumu</option>
-                        <!-- Add all Kenyan counties -->
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="address-phone">Phone Number</label>
-                    <input type="tel" id="address-phone" required>
-                </div>
-                <div class="form-group">
-                    <label class="checkbox-container">
-                        <input type="checkbox" id="address-default">
-                        <span class="checkmark"></span>
-                        Set as default address
-                    </label>
-                </div>
-                <button type="submit" class="btn">Save Address</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Change Password Modal -->
-    <div class="modal" id="password-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3>Change Password</h3>
-            <form id="password-form">
-                <div class="form-group">
-                    <label for="current-password">Current Password</label>
-                    <div class="password-input">
-                        <input type="password" id="current-password" required>
-                        <i class="fas fa-eye toggle-password"></i>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label for="new-password">New Password</label>
-                    <div class="password-input">
-                        <input type="password" id="new-password" required>
-                        <i class="fas fa-eye toggle-password"></i>
-                    </div>
-                    <small class="password-hint">Minimum 8 characters with at least 1 number</small>
-                </div>
-                <div class="form-group">
-                    <label for="confirm-password">Confirm New Password</label>
-                    <div class="password-input">
-                        <input type="password" id="confirm-password" required>
-                        <i class="fas fa-eye toggle-password"></i>
-                    </div>
-                </div>
-                <button type="submit" class="btn">Update Password</button>
-            </form>
-        </div>
-    </div>
-
-    <!-- Delete Account Modal -->
-    <div class="modal" id="delete-modal">
-        <div class="modal-content">
-            <span class="close-modal">&times;</span>
-            <h3>Delete Your Account</h3>
-            <div class="delete-warning">
-                <i class="fas fa-exclamation-triangle"></i>
-                <p>Are you sure you want to delete your account? This action cannot be undone.</p>
-            </div>
-            <form id="delete-form">
-                <div class="form-group">
-                    <label for="delete-password">Enter your password to confirm</label>
-                    <div class="password-input">
-                        <input type="password" id="delete-password" required>
-                        <i class="fas fa-eye toggle-password"></i>
-                    </div>
-                </div>
-                <div class="form-actions">
-                    <button type="button" class="btn btn-outline" id="cancel-delete">Cancel</button>
-                    <button type="submit" class="btn btn-danger">Delete Account</button>
-                </div>
-            </form>
-        </div>
-    </div>
+    <!-- Footer (Same as other pages) -->
+    <footer class="footer">
+        <!-- Your existing footer content -->
+    </footer>
 
     <script src="js/account.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

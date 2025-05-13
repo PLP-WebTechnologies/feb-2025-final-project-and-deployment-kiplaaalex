@@ -208,3 +208,84 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 3000);
     }
 });
+// Add this at the start of auth.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Check for redirect message
+    const urlParams = new URLSearchParams(window.location.search);
+    const message = urlParams.get('message');
+    if (message) {
+        showAlert(message, 'info');
+    }
+
+    // Rest of your auth.js code...
+});
+
+// Modify the login success handler
+function loginUser(email, password) {
+    const users = JSON.parse(localStorage.getItem('users')) || [];
+    const user = users.find(u => u.email === email && u.password === password);
+    
+    if (user) {
+        localStorage.setItem('currentUser', JSON.stringify(user));
+        showAlert('Login successful!', 'success');
+        
+        // Redirect to return URL or homepage
+        const returnUrl = localStorage.getItem('returnUrl') || 'index.html';
+        localStorage.removeItem('returnUrl');
+        setTimeout(() => {
+            window.location.href = returnUrl;
+        }, 1500);
+    } else {
+        showAlert('Invalid email or password', 'error');
+    }
+}
+
+// Password reset functionality
+const resetForm = document.getElementById('reset-form');
+const showLogin = document.getElementById('show-login');
+
+if (resetForm && showLogin) {
+    showLogin.addEventListener('click', (e) => {
+        e.preventDefault();
+        document.getElementById('login-toggle').click();
+    });
+
+    resetForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const email = document.getElementById('reset-email').value;
+        
+        // In a real app, send to server
+        showAlert('If an account exists with this email, a reset link has been sent', 'info');
+        resetForm.reset();
+    });
+}
+
+// In auth.js
+document.getElementById('google-login').addEventListener('click', () => {
+    // In a real app, this would redirect to your backend OAuth endpoint
+    window.location.href = '/auth/google';
+});
+
+// Server-side (Node.js example)
+const passport = require('passport');
+const GoogleStrategy = require('passport-google-oauth20').Strategy;
+
+passport.use(new GoogleStrategy({
+    clientID: 'your_client_id',
+    clientSecret: 'your_client_secret',
+    callbackURL: '/auth/google/callback'
+},
+(accessToken, refreshToken, profile, done) => {
+    // Find or create user in your database
+    return done(null, profile);
+}));
+
+app.get('/auth/google',
+    passport.authenticate('google', { scope: ['profile', 'email'] }));
+
+app.get('/auth/google/callback',
+    passport.authenticate('google', { failureRedirect: '/login' }),
+    (req, res) => {
+        // Successful authentication
+        res.redirect('/');
+    });

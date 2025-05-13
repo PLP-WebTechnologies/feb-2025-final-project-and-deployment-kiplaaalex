@@ -2434,3 +2434,30 @@ ul {
 .search-results-header p {
     color: var(--text-light);
 }
+
+/* User Actions */
+.user-actions {
+    display: flex;
+    align-items: center;
+    margin-left: 15px;
+}
+
+.user-actions span {
+    margin: 0 5px;
+    color: var(--text-light);
+}
+
+.user-link {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.user-link:hover {
+    color: var(--secondary-color);
+}
+
+.user-icon i.fa-user-circle {
+    color: var(--secondary-color);
+}

@@ -244,3 +244,33 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize cart summary
     updateCartSummary();
 });
+
+// Modify the checkout button click handler
+const checkoutBtn = document.querySelector('.btn-checkout');
+if (checkoutBtn) {
+    checkoutBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+        
+        if (!currentUser) {
+            document.getElementById('login-modal').style.display = 'block';
+            return;
+        }
+        
+        window.location.href = 'checkout.html';
+    });
+}
+
+// Close modal functionality
+document.querySelectorAll('.close-modal').forEach(btn => {
+    btn.addEventListener('click', function() {
+        document.getElementById('login-modal').style.display = 'none';
+    });
+});
+
+// Close modal when clicking outside
+window.addEventListener('click', function(e) {
+    if (e.target === document.getElementById('login-modal')) {
+        document.getElementById('login-modal').style.display = 'none';
+    }
+});

@@ -424,3 +424,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
     initShippingInfo();
 });
+// Add this at the top of checkout.js
+document.addEventListener('DOMContentLoaded', function() {
+    // Check authentication before allowing checkout
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    if (!currentUser) {
+        // Redirect to login with return URL
+        localStorage.setItem('returnUrl', window.location.href);
+        window.location.href = 'auth.html?action=login&message=Please login to complete your purchase';
+        return;
+    }
+    
+    // Rest of your checkout.js code...
+});

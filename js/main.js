@@ -672,3 +672,47 @@ document.addEventListener('DOMContentLoaded', function() {
     };
     initializeSearch();
 });
+
+// USER AUTHENTICATION STATE
+function updateAuthState() {
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    const loginLink = document.getElementById('login-link');
+    const registerLink = document.getElementById('register-link');
+    const userIcon = document.querySelector('.user-icon');
+    
+    if (currentUser) {
+        // User is logged in
+        if (loginLink && registerLink) {
+            loginLink.textContent = currentUser.name.split(' ')[0];
+            loginLink.href = 'account.html';
+            registerLink.textContent = 'Logout';
+            registerLink.href = '#';
+            registerLink.onclick = function(e) {
+                e.preventDefault();
+                localStorage.removeItem('currentUser');
+                window.location.href = 'index.html';
+            };
+        }
+        
+        if (userIcon) {
+            userIcon.innerHTML = `<i class="fas fa-user-circle"></i>`;
+            userIcon.title = `Logged in as ${currentUser.name}`;
+        }
+    } else {
+        // User is logged out
+        if (userIcon) {
+            userIcon.innerHTML = `<i class="fas fa-user"></i>`;
+            userIcon.title = 'Account';
+        }
+    }
+}
+
+// Initialize auth state on page load
+updateAuthState();
+
+// Check for auth redirect
+const urlParams = new URLSearchParams(window.location.search);
+const authAction = urlParams.get('action');
+if (authAction === 'register' && window.location.pathname.includes('auth.html')) {
+    document.getElementById('register-toggle').click();
+}
