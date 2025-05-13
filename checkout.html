@@ -1,0 +1,534 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Vistas Stores | Kenya's Online Shopping Destination</title>
+    <meta name="description" content="Secure checkout process at Vistas Stores with Kenyan payment options including M-Pesa and Airtel Money.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (Same as index.html) -->
+    <header class="header">
+        <div class="user-actions">
+    <a href="auth.html" class="user-link" id="login-link">Login</a>
+    <span>/</span>
+    <a href="auth.html?action=register" class="user-link" id="register-link">Register</a>
+</div>
+        <!-- Same header content as index.html -->
+    </header>
+
+    <!-- Checkout Page Content -->
+    <section class="checkout-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Checkout</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / 
+                    <a href="cart.html">Cart</a> / 
+                    <span>Checkout</span>
+                </div>
+            </div>
+            
+            <div class="checkout-container">
+                <div class="checkout-steps">
+                    <div class="step active" data-step="1">
+                        <span class="step-number">1</span>
+                        <span class="step-title">Shipping</span>
+                    </div>
+                    <div class="step" data-step="2">
+                        <span class="step-number">2</span>
+                        <span class="step-title">Payment</span>
+                    </div>
+                    <div class="step" data-step="3">
+                        <span class="step-number">3</span>
+                        <span class="step-title">Review</span>
+                    </div>
+                    <div class="step" data-step="4">
+                        <span class="step-number">4</span>
+                        <span class="step-title">Complete</span>
+                    </div>
+                </div>
+                
+                <div class="checkout-content">
+                    <!-- Step 1: Shipping Information -->
+                    <div class="checkout-step active" id="step-1">
+                        <h2>Shipping Information</h2>
+                        <div class="shipping-form">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="shipping-first-name">First Name *</label>
+                                    <input type="text" id="shipping-first-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="shipping-last-name">Last Name *</label>
+                                    <input type="text" id="shipping-last-name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="shipping-email">Email Address *</label>
+                                <input type="email" id="shipping-email" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="shipping-phone">Phone Number *</label>
+                                <input type="tel" id="shipping-phone" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="shipping-address">Street Address *</label>
+                                <input type="text" id="shipping-address" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="shipping-city">City / Town *</label>
+                                    <input type="text" id="shipping-city" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="shipping-county">County *</label>
+                                    <select id="shipping-county" required>
+                                        <option value="">Select County</option>
+                                        <option value="nairobi">Nairobi</option>
+                                        <option value="mombasa">Mombasa</option>
+                                        <option value="kisumu">Kisumu</option>
+                                        <option value="nakuru">Nakuru</option>
+                                        <option value="kiambu">Kiambu</option>
+                                        <option value="other">Other</option>
+                                    </select>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="shipping-notes">Order Notes (Optional)</label>
+                                <textarea id="shipping-notes" rows="3" placeholder="Notes about your order, e.g. special delivery instructions"></textarea>
+                            </div>
+                            
+                            <div class="form-group shipping-method">
+                                <h3>Shipping Method</h3>
+                                <div class="shipping-options">
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shipping-method" value="standard" checked>
+                                        <div class="option-content">
+                                            <span class="option-title">Standard Shipping</span>
+                                            <span class="option-details">3-5 business days</span>
+                                            <span class="option-price">KES 300</span>
+                                        </div>
+                                    </label>
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shipping-method" value="express">
+                                        <div class="option-content">
+                                            <span class="option-title">Express Shipping</span>
+                                            <span class="option-details">1-2 business days (Nairobi), 2-3 business days (other counties)</span>
+                                            <span class="option-price">KES 600</span>
+                                        </div>
+                                    </label>
+                                    <label class="shipping-option">
+                                        <input type="radio" name="shipping-method" value="free">
+                                        <div class="option-content">
+                                            <span class="option-title">Free Shipping</span>
+                                            <span class="option-details">Orders over KES 5,000 within Nairobi (3-5 business days)</span>
+                                            <span class="option-price">KES 0</span>
+                                        </div>
+                                    </label>
+                                </div>
+                            </div>
+                            
+                            <div class="form-actions">
+                                <button class="btn btn-back">Back to Cart</button>
+                                <button class="btn btn-next" data-next="2">Continue to Payment</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 2: Payment Information -->
+                    <div class="checkout-step" id="step-2">
+                        <h2>Payment Method</h2>
+                        <div class="payment-methods">
+                            <div class="payment-method-tabs">
+                                <button class="payment-tab active" data-tab="mpesa">M-Pesa</button>
+                                <button class="payment-tab" data-tab="airtel">Airtel Money</button>
+                                <button class="payment-tab" data-tab="card">Credit/Debit Card</button>
+                                <button class="payment-tab" data-tab="bank">Bank Transfer</button>
+                            </div>
+                            
+                            <div class="payment-tab-content active" id="mpesa-tab">
+                                <div class="payment-instructions">
+                                    <p>Complete your payment using M-Pesa. You will receive a payment request on your phone.</p>
+                                    <div class="mpesa-steps">
+                                        <div class="step">
+                                            <span class="step-number">1</span>
+                                            <span class="step-text">Enter your M-Pesa registered phone number below</span>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-number">2</span>
+                                            <span class="step-text">Click "Pay with M-Pesa" button</span>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-number">3</span>
+                                            <span class="step-text">Enter your M-Pesa PIN when prompted on your phone</span>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-number">4</span>
+                                            <span class="step-text">Wait for payment confirmation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-form">
+                                    <div class="form-group">
+                                        <label for="mpesa-phone">M-Pesa Phone Number *</label>
+                                        <input type="tel" id="mpesa-phone" placeholder="e.g. 254712345678" required>
+                                    </div>
+                                    
+                                    <div class="payment-summary">
+                                        <div class="summary-row">
+                                            <span>Order Total</span>
+                                            <span>KES 279,997</span>
+                                        </div>
+                                        <div class="summary-row">
+                                            <span>Shipping</span>
+                                            <span>KES 0</span>
+                                        </div>
+                                        <div class="summary-row total">
+                                            <span>Amount to Pay</span>
+                                            <span>KES 279,997</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn btn-pay" id="pay-with-mpesa">Pay with M-Pesa</button>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-tab-content" id="airtel-tab">
+                                <div class="payment-instructions">
+                                    <p>Complete your payment using Airtel Money. You will receive a payment request on your phone.</p>
+                                    <div class="airtel-steps">
+                                        <div class="step">
+                                            <span class="step-number">1</span>
+                                            <span class="step-text">Enter your Airtel Money registered phone number below</span>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-number">2</span>
+                                            <span class="step-text">Click "Pay with Airtel Money" button</span>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-number">3</span>
+                                            <span class="step-text">Enter your Airtel Money PIN when prompted on your phone</span>
+                                        </div>
+                                        <div class="step">
+                                            <span class="step-number">4</span>
+                                            <span class="step-text">Wait for payment confirmation</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-form">
+                                    <div class="form-group">
+                                        <label for="airtel-phone">Airtel Money Phone Number *</label>
+                                        <input type="tel" id="airtel-phone" placeholder="e.g. 254712345678" required>
+                                    </div>
+                                    
+                                    <div class="payment-summary">
+                                        <div class="summary-row">
+                                            <span>Order Total</span>
+                                            <span>KES 279,997</span>
+                                        </div>
+                                        <div class="summary-row">
+                                            <span>Shipping</span>
+                                            <span>KES 0</span>
+                                        </div>
+                                        <div class="summary-row total">
+                                            <span>Amount to Pay</span>
+                                            <span>KES 279,997</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn btn-pay" id="pay-with-airtel">Pay with Airtel Money</button>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-tab-content" id="card-tab">
+                                <div class="payment-instructions">
+                                    <p>Pay securely using your Visa, Mastercard or other debit/credit card.</p>
+                                    <div class="card-icons">
+                                        <img src="images/visa.png" alt="Visa">
+                                        <img src="images/mastercard.png" alt="Mastercard">
+                                        <img src="images/american-express.png" alt="American Express">
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-form">
+                                    <div class="form-group">
+                                        <label for="card-number">Card Number *</label>
+                                        <input type="text" id="card-number" placeholder="1234 5678 9012 3456" required>
+                                    </div>
+                                    
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label for="card-expiry">Expiry Date *</label>
+                                            <input type="text" id="card-expiry" placeholder="MM/YY" required>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="card-cvv">CVV *</label>
+                                            <input type="text" id="card-cvv" placeholder="123" required>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="card-name">Name on Card *</label>
+                                        <input type="text" id="card-name" placeholder="John Doe" required>
+                                    </div>
+                                    
+                                    <div class="payment-summary">
+                                        <div class="summary-row">
+                                            <span>Order Total</span>
+                                            <span>KES 279,997</span>
+                                        </div>
+                                        <div class="summary-row">
+                                            <span>Shipping</span>
+                                            <span>KES 0</span>
+                                        </div>
+                                        <div class="summary-row total">
+                                            <span>Amount to Pay</span>
+                                            <span>KES 279,997</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn btn-pay" id="pay-with-card">Pay with Card</button>
+                                </div>
+                            </div>
+                            
+                            <div class="payment-tab-content" id="bank-tab">
+                                <div class="payment-instructions">
+                                    <p>Make payment via bank transfer to our corporate account. Your order will be processed once payment is confirmed.</p>
+                                    <div class="bank-details">
+                                        <h4>Bank Transfer Details</h4>
+                                        <div class="bank-info">
+                                            <p><strong>Bank Name:</strong> Kenya Commercial Bank (KCB)</p>
+                                            <p><strong>Account Name:</strong> Vistas Stores Limited</p>
+                                            <p><strong>Account Number:</strong> 1234567890</p>
+                                            <p><strong>Branch:</strong> Nairobi Main Branch</p>
+                                            <p><strong>Swift Code:</strong> KCBLKENX</p>
+                                        </div>
+                                        <p class="note">Please use your order number as the payment reference.</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="payment-form">
+                                    <div class="form-group">
+                                        <label for="bank-reference">Payment Reference *</label>
+                                        <input type="text" id="bank-reference" placeholder="Your order number" required>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="bank-slip">Upload Payment Slip *</label>
+                                        <input type="file" id="bank-slip" accept="image/*,.pdf" required>
+                                        <small>Upload a clear image or PDF of your payment slip</small>
+                                    </div>
+                                    
+                                    <div class="payment-summary">
+                                        <div class="summary-row">
+                                            <span>Order Total</span>
+                                            <span>KES 279,997</span>
+                                        </div>
+                                        <div class="summary-row">
+                                            <span>Shipping</span>
+                                            <span>KES 0</span>
+                                        </div>
+                                        <div class="summary-row total">
+                                            <span>Amount to Pay</span>
+                                            <span>KES 279,997</span>
+                                        </div>
+                                    </div>
+                                    
+                                    <button class="btn btn-pay" id="confirm-bank-payment">Confirm Bank Payment</button>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button class="btn btn-back" data-back="1">Back to Shipping</button>
+                            <button class="btn btn-next" data-next="3">Review Order</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 3: Order Review -->
+                    <div class="checkout-step" id="step-3">
+                        <h2>Review Your Order</h2>
+                        <div class="order-review">
+                            <div class="review-section shipping-review">
+                                <h3>Shipping Information</h3>
+                                <div class="review-content">
+                                    <p><strong>John Doe</strong></p>
+                                    <p>123 Nairobi Street</p>
+                                    <p>Nairobi, Kenya</p>
+                                    <p>Phone: 254712345678</p>
+                                    <p>Email: john.doe@example.com</p>
+                                    <p><strong>Shipping Method:</strong> Free Shipping (3-5 business days)</p>
+                                </div>
+                                <button class="btn btn-edit" data-edit="1">Edit</button>
+                            </div>
+                            
+                            <div class="review-section payment-review">
+                                <h3>Payment Method</h3>
+                                <div class="review-content">
+                                    <p><strong>M-Pesa</strong></p>
+                                    <p>Phone: 254712345678</p>
+                                    <p>Payment will be requested on this number</p>
+                                </div>
+                                <button class="btn btn-edit" data-edit="2">Edit</button>
+                            </div>
+                            
+                            <div class="review-section order-items">
+                                <h3>Order Items</h3>
+                                <div class="order-items-list">
+                                    <div class="order-item">
+                                        <div class="item-image">
+                                            <img src="images/products/product1-thumb1.jpg" alt="Samsung Galaxy S23 Ultra">
+                                        </div>
+                                        <div class="item-details">
+                                            <h4>Samsung Galaxy S23 Ultra 5G (12GB RAM, 256GB Storage)</h4>
+                                            <div class="item-options">
+                                                <span>Color: Phantom Black</span>
+                                                <span>Storage: 256GB</span>
+                                            </div>
+                                            <div class="item-quantity">Qty: 1</div>
+                                        </div>
+                                        <div class="item-price">KES 159,999</div>
+                                    </div>
+                                    
+                                    <div class="order-item">
+                                        <div class="item-image">
+                                            <img src="images/products/product2-thumb1.jpg" alt="Apple Watch Series 8">
+                                        </div>
+                                        <div class="item-details">
+                                            <h4>Apple Watch Series 8 GPS, 45mm Midnight Aluminium Case</h4>
+                                            <div class="item-options">
+                                                <span>Size: 45mm</span>
+                                                <span>Band: Sport Band</span>
+                                            </div>
+                                            <div class="item-quantity">Qty: 2</div>
+                                        </div>
+                                        <div class="item-price">KES 119,998</div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="review-section order-summary">
+                                <h3>Order Summary</h3>
+                                <div class="summary-details">
+                                    <div class="summary-row">
+                                        <span>Subtotal</span>
+                                        <span>KES 279,997</span>
+                                    </div>
+                                    <div class="summary-row">
+                                        <span>Shipping</span>
+                                        <span>KES 0</span>
+                                    </div>
+                                    <div class="summary-row total">
+                                        <span>Total</span>
+                                        <span>KES 279,997</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="terms-agreement">
+                            <label class="checkbox-container">
+                                <input type="checkbox" id="agree-terms" required>
+                                <span class="checkmark"></span>
+                                I have read and agree to the <a href="#">Terms and Conditions</a> and <a href="#">Privacy Policy</a>
+                            </label>
+                        </div>
+                        
+                        <div class="form-actions">
+                            <button class="btn btn-back" data-back="2">Back to Payment</button>
+                            <button class="btn btn-place-order">Place Order</button>
+                        </div>
+                    </div>
+                    
+                    <!-- Step 4: Order Complete -->
+                    <div class="checkout-step" id="step-4">
+                        <div class="order-complete">
+                            <div class="success-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h2>Thank You For Your Order!</h2>
+                            <p class="order-number">Your order number is: <strong>VS-2023-12345</strong></p>
+                            <p>We've sent a confirmation email with your order details and payment receipt.</p>
+                            
+                            <div class="order-details">
+                                <div class="detail-card">
+                                    <h3>Order Summary</h3>
+                                    <div class="detail-item">
+                                        <span>Date</span>
+                                        <span>June 15, 2023</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span>Total</span>
+                                        <span>KES 279,997</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span>Payment Method</span>
+                                        <span>M-Pesa</span>
+                                    </div>
+                                </div>
+                                
+                                <div class="detail-card">
+                                    <h3>Shipping Information</h3>
+                                    <div class="detail-item">
+                                        <span>Name</span>
+                                        <span>John Doe</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span>Address</span>
+                                        <span>123 Nairobi Street, Nairobi, Kenya</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span>Phone</span>
+                                        <span>254712345678</span>
+                                    </div>
+                                    <div class="detail-item">
+                                        <span>Shipping Method</span>
+                                        <span>Free Shipping (3-5 business days)</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <div class="order-actions">
+                                <a href="index.html" class="btn btn-continue">Continue Shopping</a>
+                                <a href="#" class="btn btn-track">Track Your Order</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter (Same as index.html) -->
+    <section class="newsletter">
+        <!-- Same newsletter content as index.html -->
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <!-- Same footer content as index.html -->
+    </footer>
+
+    <script src="js/checkout.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/product-detail.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="js/cart.js"></script>
+
+</body>
+</html>

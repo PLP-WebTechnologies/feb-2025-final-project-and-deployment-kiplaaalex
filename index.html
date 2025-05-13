@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vistas Stores - Premium Online Shopping in Kenya</title>
+    <meta name="description" content="Vistas Stores - Kenya's premier online shopping destination for electronics, fashion, home goods and more. Secure payments via M-Pesa, Airtel Money and bank transfer.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header Section -->
+    <header class="header">
+        <div class="user-actions">
+    <a href="auth.html" class="user-link" id="login-link">Login</a>
+    <span>/</span>
+    <a href="auth.html?action=register" class="user-link" id="register-link">Register</a>
+</div>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><img src="images/logo.png" alt="Vistas Stores Logo"></a>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="products.html">Products</a></li>
+                    <li><a href="product-detail.html">Featured</a></li>
+                    <li><a href="cart.html">Cart</a></li>
+                    <li><a href="checkout.html">Checkout</a></li>
+                </ul>
+            </nav>
+            <div class="icons">
+                <div class="search-box">
+    <form>
+        <input type="text" placeholder="Search products..." name="search">
+        <button type="submit"><i class="fas fa-search"></i></button>
+    </form>
+</div>
+                <a href="cart.html" class="cart-icon"><i class="fas fa-shopping-cart"></i> <span class="cart-count">0</span></a>
+                <div class="user-icon"><i class="fas fa-user"></i></div>
+                <div class="mobile-menu"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Premium Shopping Experience in Kenya</h1>
+                <p>Discover the best deals on electronics, fashion, home goods and more with secure M-Pesa, Airtel Money and bank payments.</p>
+                <a href="products.html" class="btn">Shop Now</a>
+            </div>
+            <div class="hero-image">
+                <img src="images/hero-image.png" alt="Vistas Stores Products">
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Categories -->
+    <section class="categories">
+        <div class="container">
+            <h2 class="section-title">Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card">
+                    <img src="images/electronics.jpg" alt="Electronics">
+                    <h3>Electronics</h3>
+                    <a href="products.html?category=electronics" class="btn btn-small">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/fashion.jpg" alt="Fashion">
+                    <h3>Fashion</h3>
+                    <a href="products.html?category=fashion" class="btn btn-small">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/home.jpg" alt="Home & Living">
+                    <h3>Home & Living</h3>
+                    <a href="products.html?category=home" class="btn btn-small">View Products</a>
+                </div>
+                <div class="category-card">
+                    <img src="images/groceries.jpg" alt="Groceries">
+                    <h3>Groceries</h3>
+                    <a href="products.html?category=groceries" class="btn btn-small">View Products</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2 class="section-title">Featured Products</h2>
+            <div class="product-grid" id="featured-products">
+                <!-- Products will be loaded via JavaScript -->
+            </div>
+            <div class="view-all">
+                <a href="products.html" class="btn">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="benefits">
+        <div class="container">
+            <h2 class="section-title">Why Shop With Vistas Stores</h2>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <i class="fas fa-truck"></i>
+                    <h3>Free Delivery</h3>
+                    <p>Free delivery on orders over KES 5,000 within Nairobi</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Secure Payments</h3>
+                    <p>100% secure payments via M-Pesa, Airtel Money & banks</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-undo"></i>
+                    <h3>Easy Returns</h3>
+                    <p>7-day easy return policy for all products</p>
+                </div>
+                <div class="benefit-card">
+                    <i class="fas fa-headset"></i>
+                    <h3>24/7 Support</h3>
+                    <p>Dedicated customer support available anytime</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="testimonial-slider">
+                <div class="testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p>"Vistas Stores made my shopping experience seamless. The M-Pesa payment was instant and delivery was prompt!"</p>
+                    <div class="customer">
+                        <img src="images/customer1.jpg" alt="Customer">
+                        <h4>James Mwangi</h4>
+                        <span>Nairobi</span>
+                    </div>
+                </div>
+                <div class="testimonial">
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p>"I love the variety of products and the multiple payment options. Airtel Money integration is a game changer!"</p>
+                    <div class="customer">
+                        <img src="images/customer2.jpg" alt="Customer">
+                        <h4>Sarah Atieno</h4>
+                        <span>Mombasa</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get exclusive deals, product updates and shopping tips straight to your inbox.</p>
+            </div>
+            <form class="newsletter-form">
+                <input type="email" placeholder="Enter your email address" required>
+                <button type="submit" class="btn">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <img src="images/logo-white.png" alt="Vistas Stores Logo" class="footer-logo">
+                    <p>Kenya's premier online shopping destination offering quality products with secure payment options.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="cart.html">Shopping Cart</a></li>
+                        <li><a href="checkout.html">Checkout</a></li>
+                        <li><a href="#">About Us</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Customer Service</h3>
+                    <ul>
+                        <li><a href="#">My Account</a></li>
+                        <li><a href="#">Order Tracking</a></li>
+                        <li><a href="#">Wishlist</a></li>
+                        <li><a href="#">Returns & Exchanges</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> Vistas Plaza, Njoro, Kenya</li>
+                        <li><i class="fas fa-phone"></i> +254 700 000 000</li>
+                        <li><i class="fas fa-envelope"></i> info@vistasstores.co.ke</li>
+                        <li><i class="fas fa-clock"></i> Mon-Sun: 8:00 AM - 8:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="payment-methods">
+                    <p>We Accept:</p>
+                    <img src="Images/Assets/Mpesa.png" alt="M-Pesa">
+                    <img src="Images/Assets/Airtel Money.png" alt="Airtel Money">
+                    <img src="Images/Assets/Visa.png" alt="Visa">
+                    <img src="Images/Assets/MasterCard.png" alt="Mastercard">
+                    <img src="Images/Assets/BankTransfer.jpeg" alt="Bank Transfer">
+                </div>
+                <div class="copyright">
+                    <p>&copy; 2025 Vistas Stores. All Rights Reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/cart.js"></script>
+    <script src="js/products.js"></script>
+    <script src="js/product-detail.js"></script>
+
+</body>
+</html>

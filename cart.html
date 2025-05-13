@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart - Vistas Stores | Kenya's Online Shopping Destination</title>
+    <meta name="description" content="Your shopping cart at Vistas Stores with secure Kenyan payment options including M-Pesa and Airtel Money.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (Same as index.html) -->
+    <header class="header">
+        <div class="user-actions">
+    <a href="auth.html" class="user-link" id="login-link">Login</a>
+    <span>/</span>
+    <a href="auth.html?action=register" class="user-link" id="register-link">Register</a>
+</div>
+        <!-- Same header content as index.html -->
+    </header>
+
+    <!-- Cart Page Content -->
+    <section class="cart-page">
+        <div class="container">
+            <div class="page-header">
+                <h1>Shopping Cart</h1>
+                <div class="breadcrumb">
+                    <a href="index.html">Home</a> / <span>Cart</span>
+                </div>
+            </div>
+            
+            <div class="cart-container">
+                <div class="cart-items">
+                    <div class="cart-header">
+                        <div class="header-item product">Product</div>
+                        <div class="header-item price">Price</div>
+                        <div class="header-item quantity">Quantity</div>
+                        <div class="header-item subtotal">Subtotal</div>
+                        <div class="header-item remove">Remove</div>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-product">
+                            <div class="product-image">
+                                <img src="images/products/product1-thumb1.jpg" alt="Samsung Galaxy S23 Ultra">
+                            </div>
+                            <div class="product-details">
+                                <h3><a href="product-detail.html">Samsung Galaxy S23 Ultra 5G (12GB RAM, 256GB Storage)</a></h3>
+                                <div class="product-options">
+                                    <span>Color: Phantom Black</span>
+                                    <span>Storage: 256GB</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">
+                            <span class="current-price">KES 159,999</span>
+                            <span class="original-price">KES 179,999</span>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="cart-item-subtotal">
+                            KES 159,999
+                        </div>
+                        <div class="cart-item-remove">
+                            <button class="remove-btn"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-item">
+                        <div class="cart-item-product">
+                            <div class="product-image">
+                                <img src="images/products/product2-thumb1.jpg" alt="Apple Watch Series 8">
+                            </div>
+                            <div class="product-details">
+                                <h3><a href="product-detail.html">Apple Watch Series 8 GPS, 45mm Midnight Aluminium Case</a></h3>
+                                <div class="product-options">
+                                    <span>Size: 45mm</span>
+                                    <span>Band: Sport Band</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="cart-item-price">
+                            <span class="current-price">KES 59,999</span>
+                        </div>
+                        <div class="cart-item-quantity">
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" value="2" min="1" max="10">
+                                <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                        <div class="cart-item-subtotal">
+                            KES 119,998
+                        </div>
+                        <div class="cart-item-remove">
+                            <button class="remove-btn"><i class="fas fa-times"></i></button>
+                        </div>
+                    </div>
+                    
+                    <div class="cart-actions">
+                        <button class="btn btn-continue-shopping"><i class="fas fa-arrow-left"></i> Continue Shopping</button>
+                        <button class="btn btn-update-cart">Update Cart</button>
+                        <button class="btn btn-clear-cart">Clear Cart</button>
+                    </div>
+                </div>
+                
+                <div class="cart-summary">
+                    <h3>Cart Summary</h3>
+                    <div class="summary-details">
+                        <div class="summary-row">
+                            <span>Subtotal</span>
+                            <span>KES 279,997</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Shipping</span>
+                            <span>KES 0</span>
+                        </div>
+                        <div class="summary-row">
+                            <span>Tax</span>
+                            <span>KES 0</span>
+                        </div>
+                        <div class="summary-row total">
+                            <span>Total</span>
+                            <span>KES 279,997</span>
+                        </div>
+                    </div>
+                    
+                    <div class="coupon-code">
+                        <h4>Apply Coupon</h4>
+                        <div class="coupon-form">
+                            <input type="text" placeholder="Enter coupon code">
+                            <button class="btn">Apply</button>
+                        </div>
+                    </div>
+                    
+                    <div class="checkout-actions">
+                        <button class="btn btn-checkout">Proceed to Checkout</button>
+                        <div class="payment-options">
+                            <p>Secure payment options:</p>
+                            <div class="payment-icons">
+                                <img src="images/mpesa.png" alt="M-Pesa">
+                                <img src="images/airtel-money.png" alt="Airtel Money">
+                                <img src="images/visa.png" alt="Visa">
+                                <img src="images/mastercard.png" alt="Mastercard">
+                                <img src="images/bank-transfer.png" alt="Bank Transfer">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recently Viewed -->
+            <div class="recently-viewed">
+                <h2 class="section-title">Recently Viewed</h2>
+                <div class="product-grid" id="recently-viewed">
+                    <!-- Recently viewed products will be loaded via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter (Same as index.html) -->
+    <section class="newsletter">
+        <!-- Same newsletter content as index.html -->
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <!-- Same footer content as index.html -->
+    </footer>
+
+    <script src="js/cart.js"></script>
+    <script src="js/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script>
+    <script src="js/product-detail.js"></script>
+    <script src="js/recently-viewed.js"></script>
+
+
+    
+
+</body>
+</html>

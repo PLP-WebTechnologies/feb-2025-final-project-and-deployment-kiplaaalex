@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Name - Vistas Stores | Kenya's Online Shopping Destination</title>
+    <meta name="description" content="Product details page for Vistas Stores with secure Kenyan payment options including M-Pesa and Airtel Money.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header (Same as index.html) -->
+    <header class="header">
+        <div class="user-actions">
+    <a href="auth.html" class="user-link" id="login-link">Login</a>
+    <span>/</span>
+    <a href="auth.html?action=register" class="user-link" id="register-link">Register</a>
+</div>
+        <!-- Same header content as index.html -->
+    </header>
+
+    <!-- Product Detail Page Content -->
+    <section class="product-detail">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / 
+                <a href="products.html">Products</a> / 
+                <span>Product Name</span>
+            </div>
+            
+            <div class="product-detail-container">
+                <div class="product-images">
+                    <div class="main-image">
+                        <img src="images/products/product1.jpg" alt="Product Name" id="mainProductImage">
+                    </div>
+                    <div class="thumbnail-images">
+                        <img src="images/products/product1-thumb1.jpg" alt="Product Thumbnail">
+                        <img src="images/products/product1-thumb2.jpg" alt="Product Thumbnail">
+                        <img src="images/products/product1-thumb3.jpg" alt="Product Thumbnail">
+                        <img src="images/products/product1-thumb4.jpg" alt="Product Thumbnail">
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <h1 id="productName">Samsung Galaxy S23 Ultra 5G (12GB RAM, 256GB Storage)</h1>
+                    <div class="product-meta">
+                        <div class="rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(24 reviews)</span>
+                        </div>
+                        <div class="sku">SKU: SAM-GS23U-256</div>
+                        <div class="availability">In Stock</div>
+                    </div>
+                    
+                    <div class="price">
+                        <span class="current-price">KES 159,999</span>
+                        <span class="original-price">KES 179,999</span>
+                        <span class="discount">(Save KES 20,000)</span>
+                    </div>
+                    
+                    <div class="product-description">
+                        <p>The Samsung Galaxy S23 Ultra 5G features a massive 6.8-inch Dynamic AMOLED 2X display, 200MP camera system, and the powerful Snapdragon 8 Gen 2 processor. With 12GB RAM and 256GB storage, this phone delivers exceptional performance for gaming, photography, and productivity.</p>
+                        <ul>
+                            <li>6.8-inch Dynamic AMOLED 2X display (3088×1440)</li>
+                            <li>200MP wide + 12MP ultra-wide + 10MP telephoto (3x) + 10MP telephoto (10x) cameras</li>
+                            <li>12MP front camera</li>
+                            <li>Snapdragon 8 Gen 2 processor</li>
+                            <li>12GB RAM, 256GB storage</li>
+                            <li>5,000mAh battery with 45W fast charging</li>
+                            <li>IP68 water and dust resistance</li>
+                            <li>Includes S Pen</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="product-options">
+                        <div class="option color-option">
+                            <label>Color:</label>
+                            <div class="color-choices">
+                                <input type="radio" name="color" id="color-black" checked>
+                                <label for="color-black" style="background-color: #000;" title="Phantom Black"></label>
+                                
+                                <input type="radio" name="color" id="color-green">
+                                <label for="color-green" style="background-color: #6B8E23;" title="Green"></label>
+                                
+                                <input type="radio" name="color" id="color-cream">
+                                <label for="color-cream" style="background-color: #F5F5DC;" title="Cream"></label>
+                                
+                                <input type="radio" name="color" id="color-lavender">
+                                <label for="color-lavender" style="background-color: #E6E6FA;" title="Lavender"></label>
+                            </div>
+                        </div>
+                        
+                        <div class="option storage-option">
+                            <label>Storage:</label>
+                            <div class="storage-choices">
+                                <input type="radio" name="storage" id="storage-256" checked>
+                                <label for="storage-256">256GB</label>
+                                
+                                <input type="radio" name="storage" id="storage-512">
+                                <label for="storage-512">512GB (+KES 20,000)</label>
+                                
+                                <input type="radio" name="storage" id="storage-1tb">
+                                <label for="storage-1tb">1TB (+KES 40,000)</label>
+                            </div>
+                        </div>
+                        
+                        <div class="option quantity-option">
+                            <label>Quantity:</label>
+                            <div class="quantity-selector">
+                                <button class="quantity-btn minus"><i class="fas fa-minus"></i></button>
+                                <input type="number" value="1" min="1" max="10">
+                                <button class="quantity-btn plus"><i class="fas fa-plus"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <button class="btn btn-add-to-cart"><i class="fas fa-shopping-cart"></i> Add to Cart</button>
+                        <button class="btn btn-buy-now">Buy Now</button>
+                        <button class="btn btn-wishlist"><i class="far fa-heart"></i></button>
+                    </div>
+                    
+                    <div class="product-meta-details">
+                        <div class="meta-item">
+                            <i class="fas fa-truck"></i>
+                            <span>Free delivery on orders over KES 5,000 in Nairobi</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>1-year manufacturer warranty</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="fas fa-undo"></i>
+                            <span>7-day easy return policy</span>
+                        </div>
+                    </div>
+                    
+                    <div class="payment-options">
+                        <p>Secure payment options:</p>
+                        <div class="payment-icons">
+                            <img src="Images/Assets/Mpesa.png" alt="M-Pesa">
+                            <img src="Images/Assets/Airtel Money.png" alt="Airtel Money">
+                            <img src="images/visa.png" alt="Visa">
+                            <img src="images/mastercard.png" alt="Mastercard">
+                            <img src="images/bank-transfer.png" alt="Bank Transfer">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Product Tabs -->
+            <div class="product-tabs">
+                <ul class="tabs-nav">
+                    <li class="active" data-tab="description">Description</li>
+                    <li data-tab="specifications">Specifications</li>
+                    <li data-tab="reviews">Reviews (24)</li>
+                    <li data-tab="shipping">Shipping & Returns</li>
+                </ul>
+                
+                <div class="tabs-content">
+                    <div class="tab-pane active" id="description">
+                        <h3>Product Description</h3>
+                        <p>The Samsung Galaxy S23 Ultra is the ultimate smartphone for those who demand the best. With its revolutionary 200MP camera, you can capture stunning photos with incredible detail, even in low light. The adaptive pixel technology combines multiple pixels into one to produce brighter, more vibrant images.</p>
+                        <p>The S Pen transforms your phone into a powerful creative tool, letting you sketch, take notes, and edit photos with precision. The massive 6.8-inch display with 120Hz refresh rate delivers smooth scrolling and vibrant colors, perfect for streaming videos or playing games.</p>
+                        <p>Powered by the Snapdragon 8 Gen 2 processor and 12GB of RAM, the S23 Ultra handles multitasking and demanding apps with ease. The 5,000mAh battery provides all-day power, and with 45W fast charging, you can quickly get back to full power when needed.</p>
+                    </div>
+                    
+                    <div class="tab-pane" id="specifications">
+                        <h3>Technical Specifications</h3>
+                        <table>
+                            <tr>
+                                <th>Display</th>
+                                <td>6.8-inch Dynamic AMOLED 2X, 3088×1440 resolution, 120Hz refresh rate</td>
+                            </tr>
+                            <tr>
+                                <th>Processor</th>
+                                <td>Qualcomm Snapdragon 8 Gen 2</td>
+                            </tr>
+                            <tr>
+                                <th>Memory</th>
+                                <td>12GB RAM</td>
+                            </tr>
+                            <tr>
+                                <th>Storage</th>
+                                <td>256GB/512GB/1TB (no microSD slot)</td>
+                            </tr>
+                            <tr>
+                                <th>Rear Cameras</th>
+                                <td>200MP wide (f/1.7) + 12MP ultra-wide (f/2.2) + 10MP telephoto (3x, f/2.4) + 10MP telephoto (10x, f/4.9)</td>
+                            </tr>
+                            <tr>
+                                <th>Front Camera</th>
+                                <td>12MP (f/2.2)</td>
+                            </tr>
+                            <tr>
+                                <th>Battery</th>
+                                <td>5,000mAh with 45W wired charging, 15W wireless charging, 4.5W reverse wireless charging</td>
+                            </tr>
+                            <tr>
+                                <th>Operating System</th>
+                                <td>Android 13 with One UI 5.1</td>
+                            </tr>
+                            <tr>
+                                <th>Dimensions</th>
+                                <td>163.4 x 78.1 x 8.9 mm</td>
+                            </tr>
+                            <tr>
+                                <th>Weight</th>
+                                <td>234g</td>
+                            </tr>
+                            <tr>
+                                <th>Connectivity</th>
+                                <td>5G, Wi-Fi 6E, Bluetooth 5.3, NFC, USB-C</td>
+                            </tr>
+                            <tr>
+                                <th>Other Features</th>
+                                <td>IP68 water/dust resistance, Under-display fingerprint sensor, Stereo speakers, S Pen support</td>
+                            </tr>
+                        </table>
+                    </div>
+                    
+                    <div class="tab-pane" id="reviews">
+                        <h3>Customer Reviews</h3>
+                        <div class="review-summary">
+                            <div class="average-rating">
+                                <div class="rating-value">4.7</div>
+                                <div class="rating-stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <div class="rating-count">Based on 24 reviews</div>
+                            </div>
+                            <div class="rating-distribution">
+                                <div class="rating-bar">
+                                    <span class="stars">5 <i class="fas fa-star"></i></span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 75%;"></div>
+                                    </div>
+                                    <span class="count">18</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="stars">4 <i class="fas fa-star"></i></span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 16.67%;"></div>
+                                    </div>
+                                    <span class="count">4</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="stars">3 <i class="fas fa-star"></i></span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 4.17%;"></div>
+                                    </div>
+                                    <span class="count">1</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="stars">2 <i class="fas fa-star"></i></span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 0%;"></div>
+                                    </div>
+                                    <span class="count">0</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span class="stars">1 <i class="fas fa-star"></i></span>
+                                    <div class="bar-container">
+                                        <div class="bar" style="width: 4.17%;"></div>
+                                    </div>
+                                    <span class="count">1</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="review-form">
+                            <h4>Write a Review</h4>
+                            <form>
+                                <div class="form-group">
+                                    <label>Your Rating</label>
+                                    <div class="rating-input">
+                                        <i class="far fa-star" data-rating="1"></i>
+                                        <i class="far fa-star" data-rating="2"></i>
+                                        <i class="far fa-star" data-rating="3"></i>
+                                        <i class="far fa-star" data-rating="4"></i>
+                                        <i class="far fa-star" data-rating="5"></i>
+                                        <input type="hidden" name="rating" id="rating-value" value="0">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-name">Name</label>
+                                    <input type="text" id="review-name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-email">Email</label>
+                                    <input type="email" id="review-email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-title">Review Title</label>
+                                    <input type="text" id="review-title" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="review-text">Your Review</label>
+                                    <textarea id="review-text" rows="5" required></textarea>
+                                </div>
+                                <button type="submit" class="btn">Submit Review</button>
+                            </form>
+                        </div>
+                        
+                        <div class="review-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="review-author">John Kamau</div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                    </div>
+                                    <div class="review-date">Posted on March 15, 2023</div>
+                                </div>
+                                <h5 class="review-title">Best phone I've ever owned</h5>
+                                <div class="review-text">
+                                    <p>The camera on this phone is absolutely incredible. The 200MP sensor captures so much detail, and the 10x optical zoom is perfect for wildlife photography. Battery life is excellent, easily lasting a full day with heavy use. The S Pen integration is seamless and very useful for taking notes during meetings.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="review-author">Sarah Wanjiku</div>
+                                    <div class="review-rating">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </div>
+                                    <div class="review-date">Posted on March 10, 2023</div>
+                                </div>
+                                <h5 class="review-title">Great but expensive</h5>
+                                <div class="review-text">
+                                    <p>The phone is fantastic with amazing performance and camera quality. However, it's very expensive and quite heavy compared to other phones. The curved edges sometimes make it difficult to use with one hand. But if you can afford it and don't mind the size, it's definitely one of the best Android phones available.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="shipping">
+                        <h3>Shipping Information</h3>
+                        <p>We offer fast and reliable shipping across Kenya. Most orders are processed within 1-2 business days and delivered within 3-5 business days depending on your location.</p>
+                        
+                        <h4>Shipping Options</h4>
+                        <ul>
+                            <li><strong>Standard Shipping:</strong> KES 300 (3-5 business days)</li>
+                            <li><strong>Express Shipping:</strong> KES 600 (1-2 business days within Nairobi, 2-3 business days outside Nairobi)</li>
+                            <li><strong>Free Shipping:</strong> Available for orders over KES 5,000 within Nairobi</li>
+                        </ul>
+                        
+                        <h4>International Shipping</h4>
+                        <p>We currently only ship within Kenya. For international orders, please contact our customer service for special arrangements.</p>
+                        
+                        <h3>Returns & Exchanges</h3>
+                        <p>We want you to be completely satisfied with your purchase. If you're not happy with your order, you may return it within 7 days of delivery for a refund or exchange.</p>
+                        
+                        <h4>Return Conditions</h4>
+                        <ul>
+                            <li>Item must be in original condition with all accessories and packaging</li>
+                            <li>Item must not show signs of use or damage</li>
+                            <li>Original proof of purchase must be provided</li>
+                            <li>Certain items (e.g., software, earphones) may not be eligible for return due to hygiene reasons</li>
+                        </ul>
+                        
+                        <h4>Return Process</h4>
+                        <ol>
+                            <li>Contact our customer service to initiate a return</li>
+                            <li>Package the item securely with all original contents</li>
+                            <li>Ship the item back to us using a trackable shipping method</li>
+                            <li>Once received and inspected, we will process your refund or exchange</li>
+                        </ol>
+                        
+                        <p>Refunds will be issued to the original payment method within 3-5 business days after we receive and process the return. For exchanges, the new item will be shipped once the return is received.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Related Products -->
+            <div class="related-products">
+                <h2 class="section-title">You May Also Like</h2>
+                <div class="product-grid" id="related-products">
+                    <!-- Related products will be loaded via JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter (Same as index.html) -->
+    <section class="newsletter">
+        <!-- Same newsletter content as index.html -->
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="footer">
+        <!-- Same footer content as index.html -->
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/products.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/product-detail.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/js/all.min.js"></script> 
+    <script src="js/product-detail.js"></script>
+ 
+
+
+</body>
+</html>
